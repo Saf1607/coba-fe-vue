@@ -14,14 +14,14 @@ onMounted(() => {
 <template>
   <div class="home-container">
     <header class="home-header">
-      <h1>Selamat Datang, {{ userStore.user?.nama }}</h1>
+      <h1>Selamat Datang, {{ userStore.user?.name }}</h1>
       <p>Berikut adalah informasi akun Anda:</p>
     </header>
     
     <section class="account-info">
       <div class="account-detail">
         <label>Nama Akun:</label>
-        <span>{{ userStore.user?.nama }}</span>
+        <span>{{ userStore.user?.name }}</span>
       </div>
       <div class="account-detail">
         <label>Saldo:</label>

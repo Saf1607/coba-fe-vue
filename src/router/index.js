@@ -13,6 +13,7 @@ import FormLayout from '@/views/layouts/FormLayout.vue'
 import AuthorizedLayout from '@/views/layouts/AuthorizedLayout.vue'
 import TabungakuLayout from '@/views/layouts/TabungakuLayout.vue'
 import TabungankuView from '@/views/TabungankuView.vue'
+import BillerLayout from '@/views/layouts/BillerLayout.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -64,6 +65,12 @@ const router = createRouter({
       name: 'AuthorizedView',
       meta: { layout: AuthorizedLayout },
       component: () => import('@/views/AuthorizedView.vue'),
+    },
+    {
+      path: '/biller',
+      name: 'BillerView',
+      meta: { layout: BillerLayout },
+      component: () => import('@/views/BillingView.vue'),
     },
   ],
 })

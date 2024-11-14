@@ -90,7 +90,7 @@ export default {
         </thead>
         <tbody>
           <tr v-for="account in accounts" :key="account.account_id">
-            <td class="account-name">{{ account.nama }}</td>
+            <td class="account-name">{{ account.name }}</td>
             <td class="account-balance">{{ formatBalance(account.balance) }}</td>
             <td>
               <v-btn color="primary" @click="topUp(account.account_id)" class="topup-btn">

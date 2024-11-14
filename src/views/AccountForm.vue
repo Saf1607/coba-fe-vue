@@ -6,7 +6,7 @@ export default {
   data() {
     return {
       accountId: null,  // ID akun (untuk edit)
-      nama: '',         // Nama akun
+      name: '',         // Nama akun
       balance: 0,       // Saldo akun
       isEditMode: false, // Menandakan apakah sedang dalam mode edit
     };
@@ -25,7 +25,7 @@ export default {
       // Ambil data akun berdasarkan accountId
       try {
         const account = await this.getAccount(accountId);
-        this.nama = account.nama;
+        this.name = account.name;
         this.balance = account.balance;
       } catch (error) {
         console.error("Failed to load account data:", error);
@@ -34,7 +34,7 @@ export default {
     async handleSave() {
       // Menyimpan data baru atau mengupdate akun yang ada
       const accountData = {
-        nama: this.nama,
+        name: this.name,
         balance: this.balance,
       };
 
@@ -72,7 +72,7 @@ export default {
     <v-card class="account-form-card">
       <v-form @submit.prevent="handleSave">
         <v-text-field
-          v-model="nama"
+          v-model="name"
           label="Nama Akun"
           required
           :disabled="isEditMode"
@@ -86,7 +86,7 @@ export default {
           min="0"
         ></v-text-field>
         
-        <v-btn color="primary" @click="handleSave" :disabled="!nama || balance <= 0">
+        <v-btn color="primary" @click="handleSave" :disabled="!name || balance <= 0">
           Simpan
         </v-btn>
       </v-form>

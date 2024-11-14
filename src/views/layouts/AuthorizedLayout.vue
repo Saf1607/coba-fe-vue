@@ -46,7 +46,7 @@
 <script setup>
 import { ref } from 'vue'
 import logo from '@/assets/logo-digi.png'
-import { mdiHome, mdiLogout, mdiAccount, mdiLock, mdiPlus, mdiWallet, mdiHistory} from '@mdi/js'  // Add the Mutasi icon
+import { mdiHome, mdiLogout, mdiAccount, mdiLock, mdiPlus, mdiWallet, mdiHistory, mdiTransfer} from '@mdi/js'  // Add the Mutasi icon
 import { RouterView, useRouter } from 'vue-router'
 import { useUserStore } from '@/stores/user.js'
 
@@ -67,7 +67,7 @@ const sidebarLinks = [
 { icon: mdiPlus, text: 'Create Account', route: '/account/create' },  // Menu for account form page
 { icon: mdiLock, text: 'Edit Profile', route: '/changepassword' },
 { icon: mdiWallet, text: 'Dompetku', route: '/tabunganku' },  // Menu for Dompetku page
-{ icon: mdiHistory, text: 'Transactions List', route: '/authorized' }
-
+{ icon: mdiHistory, text: 'Transactions List', route: '/authorized' },
+{ icon: mdiTransfer, text: 'Biller Data', route: '/biller' }
 ]
 </script>
